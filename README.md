@@ -1,5 +1,4 @@
-react-feature-cli
-=================
+# react-feature-cli
 
 Command line tool for creating modern modular approch of react scafolding
 
@@ -9,11 +8,17 @@ Command line tool for creating modern modular approch of react scafolding
 [![License](https://img.shields.io/npm/l/react-feature-cli.svg)](https://github.com/shrijan00003@gmail.com/https://github.com/shrijan00003/react-feature-cli.git/blob/master/package.json)
 
 <!-- toc -->
-* [Usage](#usage)
-* [Commands](#commands)
+
+- [react-feature-cli](#react-feature-cli)
+- [Usage](#usage)
+- [Commands](#commands)
+- [Contributors](#contributors)
 <!-- tocstop -->
+
 # Usage
+
 <!-- usage -->
+
 ```sh-session
 $ npm install -g react-feature-cli
 $ react-feature COMMAND
@@ -25,8 +30,15 @@ USAGE
   $ react-feature COMMAND
 ...
 ```
+
 <!-- usagestop -->
+
 # Commands
+
 <!-- commands -->
 
 <!-- commandsstop -->
+
+# Contributors
+
+- please follow the branch convention RFC-[issue]
