@@ -1,5 +1,7 @@
 import { Command, flags } from '@oclif/command';
 
+import { createScaffold } from './react-feature';
+
 class ReactFeatureCli extends Command {
   static description = 'Command for creating scaffolding for the react';
 
@@ -16,11 +18,7 @@ class ReactFeatureCli extends Command {
     const featureName = args.feature || 'Default';
 
     if (featureName) {
-      this.log(`${featureName} scafolding is going to be created`);
-    }
-
-    if (flags.isTypescript) {
-      this.log('Typescript is selected');
+      createScaffold(this, featureName, flags);
     }
   }
 }
