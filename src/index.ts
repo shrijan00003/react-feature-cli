@@ -1,29 +1,28 @@
-import {Command, flags} from '@oclif/command'
+import { Command, flags } from '@oclif/command';
 
 class ReactFeatureCli extends Command {
-  static description = 'describe the command here'
+  static description = 'Command for creating scaffolding for the react';
 
   static flags = {
-    // add --version flag to show CLI version
-    version: flags.version({char: 'v'}),
-    help: flags.help({char: 'h'}),
-    // flag with a value (-n, --name=VALUE)
-    name: flags.string({char: 'n', description: 'name to print'}),
-    // flag with no value (-f, --force)
-    force: flags.boolean({char: 'f'}),
-  }
+    help: flags.help({ char: 'h' }),
+    isTypescript: flags.boolean({ char: 't' }),
+  };
 
-  static args = [{name: 'file'}]
+  static args = [{ name: 'feature' }];
 
   async run() {
-    const {args, flags} = this.parse(ReactFeatureCli)
+    const { args, flags } = this.parse(ReactFeatureCli);
 
-    const name = flags.name ?? 'world'
-    this.log(`hello ${name} from ./src/index.ts`)
-    if (args.file && flags.force) {
-      this.log(`you input --force and --file: ${args.file}`)
+    const featureName = args.feature || 'Default';
+
+    if (featureName) {
+      this.log(`${featureName} scafolding is going to be created`);
+    }
+
+    if (flags.isTypescript) {
+      this.log('Typescript is selected');
     }
   }
 }
 
-export = ReactFeatureCli
+export = ReactFeatureCli;
