@@ -1,5 +1,3 @@
-/* eslint-disable no-console */
-
 import * as fs from 'fs';
 
 export const createDir = (dirPath: string) => {
